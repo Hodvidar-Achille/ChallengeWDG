@@ -7,6 +7,7 @@ import com.hodvidar.wdg.exception.BalanceTooLowException;
 import com.hodvidar.wdg.model.Company;
 import com.hodvidar.wdg.model.Distribution;
 import com.hodvidar.wdg.model.User;
+import com.hodvidar.wdg.model.Wallet;
 import com.hodvidar.wdg.service.api.DistributionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,18 +30,20 @@ public class DistributionServiceImpl implements DistributionService {
     }
 
     @Override
-    @Transactional(rollbackFor = Exception.class)
+    @Transactional(rollbackFor = Exception.class, readOnly = false)
     public void distributeEndowment(final int companyId,
                                     final int userId,
-                                    final BigDecimal amount)
-            throws BalanceTooLowException {
+                                    final int walletId,
+                                    final BigDecimal amount) throws BalanceTooLowException {
         final Company company = this.companyDao.getCompany(companyId);
         final User user = this.userDao.getUser(userId);
-        giveEndowmentFromCompanyToUser(company, user, amount);
+        final Wallet wallet = Wallet.getWalletById(walletId);
+        giveEndowmentFromCompanyToUser(company, user, wallet, amount);
     }
 
     private void giveEndowmentFromCompanyToUser(final Company company,
                                                 final User user,
+                                                final Wallet wallet,
                                                 final BigDecimal amount)
             throws BalanceTooLowException {
         if (company.getBalance().compareTo(amount) < 0) {
@@ -52,8 +55,9 @@ public class DistributionServiceImpl implements DistributionService {
         company.setBalance(company.getBalance().subtract(amount));
         Distribution currentDistribution = new Distribution(company.getId(),
                 user.getId(),
+                wallet.id,
                 amount);
         distributionDao.saveDistribution(currentDistribution);
-        user.addDistribution(currentDistribution);
+        user.addDistribution(wallet, currentDistribution);
     }
 }
