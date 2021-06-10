@@ -1,0 +1,46 @@
+openapi: 3.0.0
+info:
+  title: WDG Challenge
+  version: '1.2'
+  description: >-
+    ## Overview
+
+
+    ### Basics
+
+    Documentation for the API.
+
+    Base URL for API : /wdg/api/rest
+
+    ### Format
+
+    Both request body data and response data are formatted as JSON.
+
+    ### HTTP status code
+
+    + 204 no_content
+
+    + 401 unauthorized
+
+paths:
+  /company/{companyId}/user/{userId}/wallet/{walledId}:
+    post:
+      tags:
+        - Endowment
+      summary: Distribute an endwoment from a company to a user to a given wallet.
+      description: 'Create a new distribution order if company balance authorize it.'
+      operationId: Create Distribution
+      requestBody:
+        description: 'Amount given to user wallet'
+        content:
+          application/json:
+            schema:
+              type: number
+              format: double
+              example: 17.95
+        required: true
+      responses:
+        204:
+          description: ''
+          headers: {}
+      deprecated: false

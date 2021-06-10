@@ -28,18 +28,18 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
         http
-            //HTTP Basic authentication
-            .httpBasic()
-            .and()
-            .authorizeRequests()
-            .antMatchers(HttpMethod.GET, BASE_URL).hasRole(USER)
-            .antMatchers(HttpMethod.POST, BASE_URL).hasRole(USER)
-            .antMatchers(HttpMethod.PUT, BASE_URL).hasRole(USER)
-            .antMatchers(HttpMethod.PATCH, BASE_URL).hasRole(USER)
-            .antMatchers(HttpMethod.DELETE, BASE_URL).hasRole(USER)
-            .and()
-            .csrf().disable()
-            .formLogin().disable();
+                //HTTP Basic authentication
+                .httpBasic()
+                .and()
+                .authorizeRequests()
+                .antMatchers(HttpMethod.GET, BASE_URL).hasRole(USER)
+                .antMatchers(HttpMethod.POST, BASE_URL).hasRole(USER)
+                .antMatchers(HttpMethod.PUT, BASE_URL).hasRole(USER)
+                .antMatchers(HttpMethod.PATCH, BASE_URL).hasRole(USER)
+                .antMatchers(HttpMethod.DELETE, BASE_URL).hasRole(USER)
+                .and()
+                .csrf().disable()
+                .formLogin().disable();
     }
 
     // from https://mkyong.com/spring-boot/spring-rest-spring-security-example/

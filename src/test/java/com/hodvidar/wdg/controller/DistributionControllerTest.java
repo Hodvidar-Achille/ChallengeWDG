@@ -34,13 +34,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @ActiveProfiles("test")
 public class DistributionControllerTest {
 
-    @Autowired
-    private MockMvc mockMvc;
-
     CompanyDao companyDao;
     UserDao userDao;
     DistributionDao distributionDao;
     DistributionService service;
+    @Autowired
+    private MockMvc mockMvc;
 
     @Before
     public void init() {
