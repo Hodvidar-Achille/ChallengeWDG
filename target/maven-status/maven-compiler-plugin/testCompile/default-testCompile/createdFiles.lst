@@ -1,0 +1,7 @@
+com\hodvidar\wdg\controller\DistributionControllerTest.class
+com\hodvidar\wdg\model\UserTest.class
+com\hodvidar\wdg\service\DistributionServiceTest.class
+com\hodvidar\wdg\dao\UserDaoTest.class
+com\hodvidar\wdg\model\DistributionTest.class
+com\hodvidar\wdg\dao\CompanyDaoTest.class
+com\hodvidar\wdg\dao\DistributionDaoTest.class

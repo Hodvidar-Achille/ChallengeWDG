@@ -1,0 +1,16 @@
+F:\w\ChallengeWDG\src\main\java\com\hodvidar\wdg\StartWdgApp.java
+F:\w\ChallengeWDG\src\main\java\com\hodvidar\wdg\dao\api\CompanyDao.java
+F:\w\ChallengeWDG\src\main\java\com\hodvidar\wdg\dao\mock\CompanyDaoMock.java
+F:\w\ChallengeWDG\src\main\java\com\hodvidar\wdg\model\Company.java
+F:\w\ChallengeWDG\src\main\java\com\hodvidar\wdg\model\Distribution.java
+F:\w\ChallengeWDG\src\main\java\com\hodvidar\wdg\service\impl\DistributionServiceImpl.java
+F:\w\ChallengeWDG\src\main\java\com\hodvidar\wdg\dao\api\UserDao.java
+F:\w\ChallengeWDG\src\main\java\com\hodvidar\wdg\model\Wallet.java
+F:\w\ChallengeWDG\src\main\java\com\hodvidar\wdg\dao\api\DistributionDao.java
+F:\w\ChallengeWDG\src\main\java\com\hodvidar\wdg\service\api\DistributionService.java
+F:\w\ChallengeWDG\src\main\java\com\hodvidar\wdg\config\SpringSecurityConfig.java
+F:\w\ChallengeWDG\src\main\java\com\hodvidar\wdg\controller\DistributionController.java
+F:\w\ChallengeWDG\src\main\java\com\hodvidar\wdg\dao\mock\DistributionDaoMock.java
+F:\w\ChallengeWDG\src\main\java\com\hodvidar\wdg\dao\mock\UserDaoMock.java
+F:\w\ChallengeWDG\src\main\java\com\hodvidar\wdg\exception\BalanceTooLowException.java
+F:\w\ChallengeWDG\src\main\java\com\hodvidar\wdg\model\User.java

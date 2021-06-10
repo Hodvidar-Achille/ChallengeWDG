@@ -1,0 +1,17 @@
+com\hodvidar\wdg\exception\BalanceTooLowException.class
+com\hodvidar\wdg\StartWdgApp.class
+com\hodvidar\wdg\service\api\DistributionService.class
+com\hodvidar\wdg\controller\DistributionController.class
+com\hodvidar\wdg\dao\api\UserDao.class
+com\hodvidar\wdg\dao\mock\UserDaoMock.class
+com\hodvidar\wdg\service\impl\DistributionServiceImpl.class
+com\hodvidar\wdg\config\SpringSecurityConfig.class
+com\hodvidar\wdg\model\Company.class
+com\hodvidar\wdg\model\Wallet$1.class
+com\hodvidar\wdg\dao\api\DistributionDao.class
+com\hodvidar\wdg\dao\mock\DistributionDaoMock.class
+com\hodvidar\wdg\dao\mock\CompanyDaoMock.class
+com\hodvidar\wdg\model\User.class
+com\hodvidar\wdg\dao\api\CompanyDao.class
+com\hodvidar\wdg\model\Distribution.class
+com\hodvidar\wdg\model\Wallet.class
